@@ -13,5 +13,5 @@ HTML • CSS • JavaScript • PHP • MySQL • Java
 - RawdidBook
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/laviendra/laviendra/output/github-contribution-grid-snake.svg" alt="GitHub Snake Game">
+  <img src="https://raw.githubusercontent.com/laviendra/laviendra/output/github-contribution-grid-snake-dark.svg" />
 </p>
