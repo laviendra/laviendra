@@ -2,8 +2,8 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Berjalan otomatis setiap hari
-  workflow_dispatch: # Memungkinkan jalankan manual
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   generate:
@@ -14,23 +14,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate snake game dengan tema Ocean Blue
+      - name: Generate snake game
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: laviendra # Username GitHub Anda
+          github_user_name: laviendra
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-          # Konfigurasi warna baru untuk tema Ocean Blue
-          snake_color: "#1e90ff" # Warna kepala ular (DodgerBlue)
-          dots_color: "#e0f7fa" # Warna sel kontribusi paling terang (Light Cyan)
-          dots_active_colors:
-            - "#81d4fa" # Tingkat 1 (LightBlue)
-            - "#4fc3f7" # Tingkat 2 (Cyan)
-            - "#29b6f6" # Tingkat 3 (LightBlue)
-            - "#0288d1" # Tingkat 4 - paling gelap (Blue)
-          grid_color: "#b0bec5" # Warna garis grid (Blue Grey)
-          # Mengatur animasi ular lebih halus
+          snake_color: "#1e90ff"
+          dots_color: "#e0f7fa"
+          dots_active_colors: |
+            #81d4fa
+            #4fc3f7
+            #29b6f6
+            #0288d1
+          grid_color: "#b0bec5"
           frame_rate: 20
           frame_count: 300
 
